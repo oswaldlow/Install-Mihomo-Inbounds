@@ -503,7 +503,7 @@ for line in content.split('\n'):
     fi
 
     # 解析配置信息
-    local node_info
+        local node_info
     node_info=$(python3 -c "
 import sys
 config_path = sys.argv[1]
@@ -538,7 +538,7 @@ for line in content.split('\n'):
             break
     if s.startswith('- name:') and in_target and s != '- name: ' + name:
         break
-# 获取 server-names 和 short-ids
+
 in_target2 = False
 in_sn = False
 in_si = False
@@ -552,10 +552,10 @@ for line in content.split('\n'):
         if in_sn and s.startswith('- '):
             domain = s[2:].strip()
             in_sn = False
-        if s.startswith('short-ids:'):
+        if s.startswith('short-id:'):
             in_si = True; continue
         if in_si and s.startswith('- '):
-            shortid = s[2:].strip()
+            shortid = s[2:].strip().strip('\"').strip('\'')
             in_si = False
         if s.startswith('- name:') and s != '- name: ' + name:
             break
