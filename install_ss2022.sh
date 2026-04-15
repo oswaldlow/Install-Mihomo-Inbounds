@@ -76,7 +76,7 @@ install_mihomo_core() {
     local arch machine
     machine="$(uname -m)"
     case "$machine" in
-        x86_64|amd64) arch="amd64" ;;
+        x86_64|amd64) arch="amd64-compatible" ;;
         aarch64|arm64) arch="arm64" ;;
         *) error "不支持的 CPU 架构: $machine"; return 1 ;;
     esac
