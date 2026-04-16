@@ -116,24 +116,26 @@ show_menu() {
     echo -e "  ${GREEN}1.${PLAIN} Geo文件更新 (立即执行，不设定时任务)"
     echo -e "  ${GREEN}2.${PLAIN} 安装/管理 Shadowsocks (2022)"
     echo -e "  ${GREEN}3.${PLAIN} 安装/管理 VLESS Reality"
-    echo -e "  ${YELLOW}4.${PLAIN} Mihomo 服务端分流配置 (Routing)"
-    echo -e "  ${RED}5.${PLAIN} 卸载 Mihomo 及相关文件"
-    echo -e "  ${CYAN}6.${PLAIN} 还原 Mihomo 配置 (Restore)"
+    echo -e "  ${GREEN}4.${PLAIN} 安装/管理 VLESS Encryption (PQ)"
+    echo -e "  ${YELLOW}5.${PLAIN} Mihomo 服务端分流配置 (Routing)"
+    echo -e "  ${RED}6.${PLAIN} 卸载 Mihomo 及相关文件"
+    echo -e "  ${CYAN}7.${PLAIN} 还原 Mihomo 配置 (Restore)"
     echo "-------------------------------------------------"
-    echo -e "  ${CYAN}7.${PLAIN} 更新此管理脚本"
+    echo -e "  ${CYAN}8.${PLAIN} 更新此管理脚本"
     echo -e "  ${CYAN}0.${PLAIN} 退出脚本"
     echo -e "${CYAN}=================================================${PLAIN}"
     
-    read -rp " 请输入选项 [0-7]: " choice
+    read -rp " 请输入选项 [0-8]: " choice
     
     case "$choice" in
         1) pull_and_run "update_geo.sh" "更新 GeoIP/GeoSite" ;;
         2) pull_and_run "install_ss2022.sh" "执行 SS2022 安装向导" ;;
         3) pull_and_run "install_vless_reality.sh" "执行 VLESS Reality 安装向导" ;;
-        4) pull_and_run "mihomo_routing.sh" "进入分流配置工具" ;;
-        5) pull_and_run "uninstall_mihomo.sh" "执行卸载程序" ;;
-        6) pull_and_run "mihomo_restore.sh" "执行配置还原工具" ;;
-        7) update_self ;;
+        4) pull_and_run "install_vless_encryption.sh" "执行 VLESS Encryption (PQ) 安装向导" ;;
+        5) pull_and_run "mihomo_routing.sh" "进入分流配置工具" ;;
+        6) pull_and_run "uninstall_mihomo.sh" "执行卸载程序" ;;
+        7) pull_and_run "mihomo_restore.sh" "执行配置还原工具" ;;
+        8) update_self ;;
         0) echo -e "${GREEN}感谢使用此脚本，再见！${PLAIN}"; exit 0 ;;
         *) echo -e "${RED}无效输入，请重新选择。${PLAIN}"; sleep 1 ;;
     esac
