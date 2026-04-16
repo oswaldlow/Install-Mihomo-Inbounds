@@ -23,7 +23,7 @@
 执行以下命令即可下载并唤出全局管理菜单：
 
 ```bash
-curl -L [https://raw.githubusercontent.com/RomanovCaesar/Install-Mihomo-Inbounds/main/mihomo_manager.sh](https://raw.githubusercontent.com/RomanovCaesar/Install-Mihomo-Inbounds/main/mihomo_manager.sh) -o mihomo_manager.sh && chmod +x mihomo_manager.sh && sudo ./mihomo_manager.sh
+curl -L https://raw.githubusercontent.com/RomanovCaesar/Install-Mihomo-Inbounds/main/mihomo_manager.sh -o mihomo_manager.sh && chmod +x mihomo_manager.sh && sudo ./mihomo_manager.sh
 ```
 
 **💡 贴心提示：**
@@ -43,39 +43,39 @@ mihomo-manager
 ### 1. VLESS Encryption (Post-Quantum) 节点管理
 支持最新一代 ML-KEM-768 抗量子加密技术，抛弃冗杂配置，仅需握手密钥即可建立安全连接。
 ```bash
-curl -L [https://raw.githubusercontent.com/RomanovCaesar/Install-Mihomo-Inbounds/main/install_vless_encryption.sh](https://raw.githubusercontent.com/RomanovCaesar/Install-Mihomo-Inbounds/main/install_vless_encryption.sh) -o install_vless_encryption.sh && chmod +x install_vless_encryption.sh && sudo ./install_vless_encryption.sh
+curl -L https://raw.githubusercontent.com/RomanovCaesar/Install-Mihomo-Inbounds/main/install_vless_encryption.sh -o install_vless_encryption.sh && chmod +x install_vless_encryption.sh && sudo ./install_vless_encryption.sh
 ```
 
 ### 2. VLESS-Reality (Vision) 节点管理
 支持自动生成 X25519 密钥对，默认使用 `xtls-rprx-vision` 流控，使用 Mihomo 的 listeners 接入。
 ```bash
-curl -L [https://raw.githubusercontent.com/RomanovCaesar/Install-Mihomo-Inbounds/main/install_vless_reality.sh](https://raw.githubusercontent.com/RomanovCaesar/Install-Mihomo-Inbounds/main/install_vless_reality.sh) -o install_vless_reality.sh && chmod +x install_vless_reality.sh && sudo ./install_vless_reality.sh
+curl -L https://raw.githubusercontent.com/RomanovCaesar/Install-Mihomo-Inbounds/main/install_vless_reality.sh -o install_vless_reality.sh && chmod +x install_vless_reality.sh && sudo ./install_vless_reality.sh
 ```
 
 ### 3. Shadowsocks 2022 & 传统 SS 节点管理
 支持极速的 2022-blake3-aes 等新一代加密协议，并向下兼容传统的 aes-gcm 加密，自动生成强随机密码。
 ```bash
-curl -L [https://raw.githubusercontent.com/RomanovCaesar/Install-Mihomo-Inbounds/main/install_ss2022.sh](https://raw.githubusercontent.com/RomanovCaesar/Install-Mihomo-Inbounds/main/install_ss2022.sh) -o install_ss2022.sh && chmod +x install_ss2022.sh && sudo ./install_ss2022.sh
+curl -L https://raw.githubusercontent.com/RomanovCaesar/Install-Mihomo-Inbounds/main/install_ss2022.sh -o install_ss2022.sh && chmod +x install_ss2022.sh && sudo ./install_ss2022.sh
 ```
 
 ### 4. 服务端路由分流工具 (Mihomo Routing)
 强大的服务端出口分流控制面板。支持解析 SS 和 VLESS 分享链接，可视化配置分流规则。
 ```bash
-curl -L [https://raw.githubusercontent.com/RomanovCaesar/Install-Mihomo-Inbounds/main/mihomo_routing.sh](https://raw.githubusercontent.com/RomanovCaesar/Install-Mihomo-Inbounds/main/mihomo_routing.sh) -o mihomo_routing.sh && chmod +x mihomo_routing.sh && sudo ./mihomo_routing.sh
+curl -L https://raw.githubusercontent.com/RomanovCaesar/Install-Mihomo-Inbounds/main/mihomo_routing.sh -o mihomo_routing.sh && chmod +x mihomo_routing.sh && sudo ./mihomo_routing.sh
 ```
 *安装后随时可用 `mihomo-routing` 命令唤起。*
 
 ### 5. 备份与还原工具 (Mihomo Restore)
 不小心改错了配置？想要迁移配置？使用此工具可以通过直链 URL 导入配置文件，或者打开控制台手动粘贴 `config.yaml`，自带安全测试防报错功能。
 ```bash
-curl -L [https://raw.githubusercontent.com/RomanovCaesar/Install-Mihomo-Inbounds/main/mihomo_restore.sh](https://raw.githubusercontent.com/RomanovCaesar/Install-Mihomo-Inbounds/main/mihomo_restore.sh) -o mihomo_restore.sh && chmod +x mihomo_restore.sh && sudo ./mihomo_restore.sh
+curl -L https://raw.githubusercontent.com/RomanovCaesar/Install-Mihomo-Inbounds/main/mihomo_restore.sh -o mihomo_restore.sh && chmod +x mihomo_restore.sh && sudo ./mihomo_restore.sh
 ```
 *安装后随时可用 `mihomo-restore` 命令唤起。*
 
 ### 6. 完全卸载工具
 如果你遇到无法解决的严重问题，或者想要完全清理服务器，可以使用此脚本。它会极其干净地清理系统服务（Systemd/OpenRC）、二进制文件、日志以及残留配置。
 ```bash
-curl -L [https://raw.githubusercontent.com/RomanovCaesar/Install-Mihomo-Inbounds/main/uninstall_mihomo.sh](https://raw.githubusercontent.com/RomanovCaesar/Install-Mihomo-Inbounds/main/uninstall_mihomo.sh) -o uninstall_mihomo.sh && chmod +x uninstall_mihomo.sh && sudo ./uninstall_mihomo.sh
+curl -L https://raw.githubusercontent.com/RomanovCaesar/Install-Mihomo-Inbounds/main/uninstall_mihomo.sh -o uninstall_mihomo.sh && chmod +x uninstall_mihomo.sh && sudo ./uninstall_mihomo.sh
 ```
 
 ---
