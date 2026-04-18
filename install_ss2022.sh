@@ -493,31 +493,19 @@ for line in content.split('\n'):
 import sys
 config_path = sys.argv[1]
 target_name = 'ss-in-' + sys.argv[2]
-
 with open(config_path, 'r') as f:
     lines = f.readlines()
-
 result = []
 skip = False
 for line in lines:
     stripped = line.strip()
     if stripped == '- name: ' + target_name:
-        skip = True
-        continue
+        skip = True; continue
     if skip:
-        if stripped.startswith('- name:') or (stripped and not stripped.startswith(' ') and not stripped.startswith('-') and ':' in stripped and not stripped.startswith('#')):
-            # 到了下一个 listener 或顶级 key
-            if stripped.startswith('- name:'):
-                skip = False
-                result.append(line)
-            else:
-                skip = False
-                result.append(line)
-        else:
-            continue
-    else:
-        result.append(line)
-
+        if stripped.startswith('- name:') or (stripped and not line.startswith(' ') and not line.startswith('-') and ':' in stripped and not stripped.startswith('#')):
+            skip = False; result.append(line)
+        else: continue
+    else: result.append(line)
 with open(config_path, 'w') as f:
     f.writelines(result)
 " "$mihomo_config_path" "$target_p"
@@ -800,26 +788,19 @@ for line in content.split('\n'):
 import sys
 config_path = sys.argv[1]
 target_name = 'ss-in-' + sys.argv[2]
-
 with open(config_path, 'r') as f:
     lines = f.readlines()
-
 result = []
 skip = False
 for line in lines:
     stripped = line.strip()
     if stripped == '- name: ' + target_name:
-        skip = True
-        continue
+        skip = True; continue
     if skip:
-        if stripped.startswith('- name:') or (stripped and not stripped.startswith(' ') and not stripped.startswith('-') and ':' in stripped and not stripped.startswith('#')):
-            skip = False
-            result.append(line)
-        else:
-            continue
-    else:
-        result.append(line)
-
+        if stripped.startswith('- name:') or (stripped and not line.startswith(' ') and not line.startswith('-') and ':' in stripped and not stripped.startswith('#')):
+            skip = False; result.append(line)
+        else: continue
+    else: result.append(line)
 with open(config_path, 'w') as f:
     f.writelines(result)
 " "$mihomo_config_path" "$target_p"
