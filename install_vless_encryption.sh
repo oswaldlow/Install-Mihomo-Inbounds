@@ -311,8 +311,7 @@ listener_block = f'''
     port: {port}
     listen: 0.0.0.0
     users:
-      - username: vless_pq_{port}
-        uuid: {uuid}
+      - uuid: {uuid}
         encryption: \"{dec_key}\"'''
 
 if re.search(r'^listeners:\s*\[\]\s*$', content, re.MULTILINE):
