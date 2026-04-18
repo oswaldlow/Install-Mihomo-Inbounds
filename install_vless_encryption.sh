@@ -764,5 +764,3 @@ main() {
     pre_check
     if [[ $# -gt 0 && "$1" == "install" ]]; then install_vless_pq; else main_menu; fi
 }
-
-main "$@"
